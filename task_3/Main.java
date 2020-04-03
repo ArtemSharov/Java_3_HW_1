@@ -12,12 +12,16 @@ f. Написать метод, который позволяет пересып
 g. Не забываем про метод добавления фрукта в коробку.
 */
 public class Main {
+    public static void getWeight(Box box){
+
+    }
     public static void main(String[] args) {
         Orange o = new Orange("Апельсинка");
         Apple a = new Apple("Яблочко");
         Box<Apple> appleBox = new Box<>();
         Box<Orange> orangeBox = new Box<>();
-        System.out.println(appleBox.putBox(o));
+        appleBox.putBox(a);
+        orangeBox.putBox(o);
 
     }
 }
