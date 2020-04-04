@@ -17,13 +17,22 @@ public class Main {
         Orange o = new Orange("Апельсинка", 1.0f);
         Apple a = new Apple("Яблочко", 1.5f);
         Box<Apple> appleBox = new Box<>();
+        Box<Apple> appleBox2 = new Box<>();
         Box<Orange> orangeBox = new Box<>();
         appleBox.putBox(a);
         appleBox.putBox(a);
+        orangeBox.putBox(o);
+        orangeBox.putBox(o);
         orangeBox.putBox(o);
         System.out.println( appleBox.getWeight());
         System.out.println( orangeBox.getWeight());
         System.out.println(a.getName() + " " + a.getWeight());
         System.out.println(o.getName() + " " + o.getWeight());
+        System.out.println(appleBox.compare(orangeBox));
+        appleBox.shiftFruit(appleBox2, 1);
+        System.out.println(appleBox2);
+        appleBox.shiftFruit(orangeBox, 1);
+
+
     }
 }
