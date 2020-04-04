@@ -14,24 +14,25 @@ g. Не забываем про метод добавления фрукта в 
 public class Main {
 
     public static void main(String[] args) {
-        Orange o = new Orange("Апельсинка", 1.0f);
-        Apple a = new Apple("Яблочко", 1.5f);
+        Orange o = new Orange("Апельсинка", 1.5f);
+        Apple a = new Apple("Яблочко", 1.0f);
         Box<Apple> appleBox = new Box<>();
         Box<Apple> appleBox2 = new Box<>();
         Box<Orange> orangeBox = new Box<>();
-        appleBox.putBox(a);
-        appleBox.putBox(a);
-        orangeBox.putBox(o);
-        orangeBox.putBox(o);
-        orangeBox.putBox(o);
+        appleBox.putBox(a, 5);
+        orangeBox.putBox(o,7);
         System.out.println( appleBox.getWeight());
         System.out.println( orangeBox.getWeight());
-        System.out.println(a.getName() + " " + a.getWeight());
-        System.out.println(o.getName() + " " + o.getWeight());
         System.out.println(appleBox.compare(orangeBox));
-        appleBox.shiftFruit(appleBox2, 1);
-        System.out.println(appleBox2);
-        appleBox.shiftFruit(orangeBox, 1);
+        appleBox.shiftFruit(appleBox2,5);
+       //orangeBox.shiftFruit(appleBox2,2); // не получится
+        System.out.println( appleBox.getWeight());
+        System.out.println( appleBox2.getWeight());
+        appleBox2.shiftFruit(appleBox,1);
+        System.out.println( appleBox.getWeight());
+        System.out.println( appleBox2.getWeight());
+
+
 
 
     }
